@@ -13,6 +13,13 @@
 		A42A02801B153C1300514B88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42A027F1B153C1300514B88 /* Images.xcassets */; };
 		A42A02831B153C1300514B88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42A02811B153C1300514B88 /* LaunchScreen.xib */; };
 		A42A028F1B153C1300514B88 /* tumblr_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A028E1B153C1300514B88 /* tumblr_demoTests.swift */; };
+		A42A02991B15664200514B88 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A02981B15664200514B88 /* TabBarViewController.swift */; };
+		A42A029B1B156AF500514B88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A029A1B156AF500514B88 /* HomeViewController.swift */; };
+		A42A029D1B156B1400514B88 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A029C1B156B1400514B88 /* SearchViewController.swift */; };
+		A42A029F1B156B2800514B88 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A029E1B156B2800514B88 /* ComposeViewController.swift */; };
+		A42A02A11B156B5B00514B88 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A02A01B156B5B00514B88 /* AccountViewController.swift */; };
+		A42A02A31B156B6600514B88 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A02A21B156B6600514B88 /* TrendingViewController.swift */; };
+		A4A2AAA01B183203007EBFB6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2AA9F1B183203007EBFB6 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		A42A02881B153C1300514B88 /* tumblr demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tumblr demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42A028D1B153C1300514B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42A028E1B153C1300514B88 /* tumblr_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tumblr_demoTests.swift; sourceTree = "<group>"; };
+		A42A02981B15664200514B88 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A42A029A1B156AF500514B88 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A42A029C1B156B1400514B88 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A42A029E1B156B2800514B88 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		A42A02A01B156B5B00514B88 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A42A02A21B156B6600514B88 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		A4A2AA9F1B183203007EBFB6 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +97,13 @@
 				A42A027F1B153C1300514B88 /* Images.xcassets */,
 				A42A02811B153C1300514B88 /* LaunchScreen.xib */,
 				A42A02761B153C1300514B88 /* Supporting Files */,
+				A42A02981B15664200514B88 /* TabBarViewController.swift */,
+				A42A029A1B156AF500514B88 /* HomeViewController.swift */,
+				A4A2AA9F1B183203007EBFB6 /* Common.swift */,
+				A42A029C1B156B1400514B88 /* SearchViewController.swift */,
+				A42A029E1B156B2800514B88 /* ComposeViewController.swift */,
+				A42A02A01B156B5B00514B88 /* AccountViewController.swift */,
+				A42A02A21B156B6600514B88 /* TrendingViewController.swift */,
 			);
 			path = "tumblr demo";
 			sourceTree = "<group>";
@@ -212,8 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42A029D1B156B1400514B88 /* SearchViewController.swift in Sources */,
+				A42A02A31B156B6600514B88 /* TrendingViewController.swift in Sources */,
 				A42A027B1B153C1300514B88 /* ViewController.swift in Sources */,
+				A42A02A11B156B5B00514B88 /* AccountViewController.swift in Sources */,
+				A4A2AAA01B183203007EBFB6 /* Common.swift in Sources */,
+				A42A02991B15664200514B88 /* TabBarViewController.swift in Sources */,
+				A42A029F1B156B2800514B88 /* ComposeViewController.swift in Sources */,
 				A42A02791B153C1300514B88 /* AppDelegate.swift in Sources */,
+				A42A029B1B156AF500514B88 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "tumblr demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "tumblr demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +435,7 @@
 				A42A02941B153C1300514B88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A42A02951B153C1300514B88 /* Build configuration list for PBXNativeTarget "tumblr demoTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +444,7 @@
 				A42A02971B153C1300514B88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
