@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40DB7141B1A970500DC86A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DB7131B1A970500DC86A1 /* LoginViewController.swift */; };
 		A42A02791B153C1300514B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A02781B153C1300514B88 /* AppDelegate.swift */; };
 		A42A027B1B153C1300514B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A027A1B153C1300514B88 /* ViewController.swift */; };
 		A42A027E1B153C1300514B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42A027C1B153C1300514B88 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A40DB7131B1A970500DC86A1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A42A02731B153C1300514B88 /* tumblr demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tumblr demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42A02771B153C1300514B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42A02781B153C1300514B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				A42A029E1B156B2800514B88 /* ComposeViewController.swift */,
 				A42A02A01B156B5B00514B88 /* AccountViewController.swift */,
 				A42A02A21B156B6600514B88 /* TrendingViewController.swift */,
+				A40DB7131B1A970500DC86A1 /* LoginViewController.swift */,
 			);
 			path = "tumblr demo";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				A42A02991B15664200514B88 /* TabBarViewController.swift in Sources */,
 				A42A029F1B156B2800514B88 /* ComposeViewController.swift in Sources */,
 				A42A02791B153C1300514B88 /* AppDelegate.swift in Sources */,
+				A40DB7141B1A970500DC86A1 /* LoginViewController.swift in Sources */,
 				A42A029B1B156AF500514B88 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

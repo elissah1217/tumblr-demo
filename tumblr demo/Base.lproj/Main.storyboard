@@ -67,31 +67,20 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="v8V-RV-Evc"/>
+                                            <action selector="composeButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xjL-Sk-RS7"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1983005111797588" green="0.25761143084099936" blue="0.35215435606060608" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="jhx-xI-bYJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="hHO-4L-Nqb">
                                 <rect key="frame" x="2" y="445" width="185" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IdN-Qe-tax">
-                                <rect key="frame" x="0.0" y="516" width="320" height="53"/>
+                            <view contentMode="scaleToFill" id="jhx-xI-bYJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="nevermind">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nevermindButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A1J-vt-wcY"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -101,14 +90,14 @@
                         <outlet property="contentView" destination="jhx-xI-bYJ" id="dMg-uY-A5I"/>
                         <outlet property="exploreBubble" destination="hHO-4L-Nqb" id="V8K-SM-Kah"/>
                         <outlet property="homeButton" destination="L35-HP-AKp" id="D77-4s-uAO"/>
-                        <outlet property="nevermindButton" destination="IdN-Qe-tax" id="Uzu-sx-01W"/>
                         <outlet property="searchButton" destination="lH6-se-TVx" id="hOV-Og-suf"/>
                         <outlet property="trendingButton" destination="45F-Ry-B2F" id="0oB-0E-Ypx"/>
+                        <segue destination="gIx-ZM-bMn" kind="modal" identifier="composeViewSegue" modalTransitionStyle="crossDissolve" id="Ro9-uy-uWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="341"/>
+            <point key="canvasLocation" x="181" y="379"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="77z-5i-4yT">
@@ -140,56 +129,16 @@
                                     <action selector="loginButtonPressed:" destination="77U-hj-fPZ" eventType="touchUpInside" id="q08-Ok-23s"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" id="5Fx-cJ-7vx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="DIa-Iz-y3X">
-                                        <rect key="frame" x="10" y="135" width="300" height="132"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="fmY-Gs-WQG">
-                                        <rect key="frame" x="19" y="142" width="282" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="Zv8-hp-DPH">
-                                        <rect key="frame" x="19" y="186" width="282" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6YL-lC-POf">
-                                        <rect key="frame" x="10" y="224" width="150" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.56463068181818188" green="0.56463068181818188" blue="0.56463068181818188" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.73946496212121215" green="0.73946496212121215" blue="0.73946496212121215" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <state key="selected">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelButtonPressed:" destination="77U-hj-fPZ" eventType="touchUpInside" id="oj5-aC-afP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="fmY-Gs-WQG" id="KP5-UO-V0K"/>
-                        <outlet property="formView" destination="5Fx-cJ-7vx" id="dmX-GQ-472"/>
+                        <segue destination="hDs-jF-ibG" kind="modal" identifier="formSegue" modalTransitionStyle="crossDissolve" id="x3Y-Ed-ZXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kM-MN-zg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="346"/>
+            <point key="canvasLocation" x="663" y="340"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="8T1-dv-M0U">
@@ -235,6 +184,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L63-Nc-fUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066" y="341"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="H0w-iO-Acr">
+            <objects>
+                <viewController id="hDs-jF-ibG" customClass="LoginViewController" customModule="tumblr_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LwI-iA-Q37">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="a1f-8M-M2c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="b7R-Si-68Q">
+                                        <rect key="frame" x="10" y="135" width="300" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="SSS-Cp-aD9">
+                                        <rect key="frame" x="19" y="142" width="282" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="XCW-R0-n93">
+                                        <rect key="frame" x="19" y="186" width="282" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rOw-8K-Rud">
+                                        <rect key="frame" x="10" y="224" width="150" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.56463068179999998" green="0.56463068179999998" blue="0.56463068179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.73946496210000001" green="0.73946496210000001" blue="0.73946496210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="hDs-jF-ibG" eventType="touchUpInside" id="D3q-yZ-CYe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.20392156859999999" blue="0.28627450980000002" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="SSS-Cp-aD9" id="U2X-FR-eLv"/>
+                        <outlet property="passwordField" destination="XCW-R0-n93" id="LfH-ka-HJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HF-ue-ROE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="-335"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="IbO-Cx-6uU">
@@ -290,33 +297,33 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6BV-5E-SWf">
+                                        <rect key="frame" x="0.0" y="515" width="320" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="nevermind">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nevermindButtonPressed:" destination="gIx-ZM-bMn" eventType="touchUpInside" id="nDu-8z-nYz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.33725490200000002" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6BV-5E-SWf">
-                                <rect key="frame" x="0.0" y="517" width="320" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="nevermind">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nvmButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MLi-48-2CG"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="chatButton" destination="7ov-c5-WXF" id="mS0-74-ixx"/>
-                        <outlet property="linkButton" destination="0s1-pi-UE0" id="xEv-uL-EBz"/>
-                        <outlet property="photoButton" destination="V6S-X8-jDs" id="3jQ-46-6BN"/>
-                        <outlet property="quoteButton" destination="lvI-cq-MBl" id="gxe-aL-NmT"/>
-                        <outlet property="textButton" destination="yLL-8b-lGF" id="YQI-Yg-h5X"/>
-                        <outlet property="videoButton" destination="DhA-Ol-Tbp" id="jmN-Zw-6mj"/>
+                        <outlet property="chatButton" destination="7ov-c5-WXF" id="WRC-ck-yg0"/>
+                        <outlet property="linkButton" destination="0s1-pi-UE0" id="Rlf-Xz-24V"/>
+                        <outlet property="photoButton" destination="V6S-X8-jDs" id="4dg-xm-CN5"/>
+                        <outlet property="quoteButton" destination="lvI-cq-MBl" id="Kc5-F5-2IM"/>
+                        <outlet property="textButton" destination="yLL-8b-lGF" id="tvR-Yh-mg8"/>
+                        <outlet property="videoButton" destination="DhA-Ol-Tbp" id="3jn-kX-Xka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMI-ss-xTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="340"/>
+            <point key="canvasLocation" x="651" y="-497"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="8YK-V1-XNe">

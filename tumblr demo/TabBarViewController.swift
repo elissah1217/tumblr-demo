@@ -8,10 +8,10 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UIViewController, UIViewControllerTransitioningDelegate {
     var homeViewController: HomeViewController!
     var searchViewController: SearchViewController!
-    var composeViewController: ComposeViewController!
+    //var composeViewController: ComposeViewController!
     var accountViewController: AccountViewController!
     var trendingViewController: TrendingViewController!
     
@@ -28,7 +28,7 @@ class TabBarViewController: UIViewController {
     
     var currentViewController: UIViewController!
     
-    @IBOutlet weak var nvmButton: UIButton!
+
     
     @IBOutlet weak var exploreBubble: UIImageView!
     
@@ -43,14 +43,14 @@ class TabBarViewController: UIViewController {
         var storyboard = UIStoryboard(name: "Main", bundle:nil)
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as HomeViewController
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController") as SearchViewController
-        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as ComposeViewController
+       // composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as ComposeViewController
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as AccountViewController
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as TrendingViewController
         
         //setting sizes
         homeViewController.view.frame = contentView.bounds
         searchViewController.view.frame = contentView.bounds
-        composeViewController.view.frame = contentView.bounds
+        //composeViewController.view.frame = self.view.bounds
         accountViewController.view.frame = contentView.bounds
         trendingViewController.view.frame = contentView.bounds
         
@@ -59,13 +59,18 @@ class TabBarViewController: UIViewController {
         currentViewController = homeViewController
         showBubble()
         
-        viewControllerArray = [homeViewController, searchViewController, composeViewController, accountViewController, trendingViewController]
+        viewControllerArray = [homeViewController, searchViewController, accountViewController, trendingViewController]
         
-        buttonArray = [homeButton, searchButton, composeButton, accountButton, trendingButton]
+        buttonArray = [homeButton, searchButton, accountButton, trendingButton]
         
         showBubble()
 
     }
+    
+    
+   
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,21 +107,20 @@ class TabBarViewController: UIViewController {
             currentViewController.willMoveToParentViewController(nil)
             currentViewController.didMoveToParentViewController(nil)
             
-            if viewControllerArray[currentIndex] != composeViewController { //if compose view didn't get clicked on
-                currentViewController.view.removeFromSuperview()
-            }
             
         }
+        
+        
         
         addChildViewController(viewControllerArray[currentIndex])
         contentView.addSubview(viewControllerArray[currentIndex].view)
         currentViewController = viewControllerArray[currentIndex]
         
-        if currentViewController == searchViewController || currentViewController == composeViewController{
+        
+        
+        if currentViewController == searchViewController{
             exploreBubble.hidden = true
-            if currentViewController == composeViewController{
-                nevermindButton.hidden = false
-            }
+
         }
         else{
             exploreBubble.hidden = false
@@ -126,17 +130,20 @@ class TabBarViewController: UIViewController {
     
     
     
-    @IBAction func nevermindButtonPressed(sender: AnyObject) {
-        composeViewController.animateButtonsOut()
-        delay(0.6, { () -> () in
-            self.currentViewController.willMoveToParentViewController(nil)
-            self.currentViewController.didMoveToParentViewController(nil)
-            self.currentViewController.view.removeFromSuperview()
-            self.nevermindButton.hidden = true
-        })
-        
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        var destinationVC = segue.destinationViewController as ComposeViewController
+        destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+        //destinationVC.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        destinationVC.transitioningDelegate = self
         
     }
+   
+    @IBAction func composeButtonPressed(sender: AnyObject) {
+        performSegueWithIdentifier("composeViewSegue", sender: self)
+    }
+   
+
     
     
     
@@ -144,7 +151,6 @@ class TabBarViewController: UIViewController {
         
         homeViewController.removeFromParentViewController()
         searchViewController.removeFromParentViewController()
-        composeViewController.removeFromParentViewController()
         accountViewController.removeFromParentViewController()
         trendingViewController.removeFromParentViewController()
     }

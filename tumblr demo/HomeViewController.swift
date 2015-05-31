@@ -8,10 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-    @IBOutlet weak var formView: UIView!
-    @IBOutlet weak var emailField: UITextField!
+    
     
     
         override func viewDidLoad() {
@@ -29,14 +28,18 @@ class HomeViewController: UIViewController {
     
 
     @IBAction func loginButtonPressed(sender: AnyObject) {
-        formView.hidden = false
-        emailField.becomeFirstResponder()
+        performSegueWithIdentifier("formSegue", sender: self)
     }
     
     
-    @IBAction func cancelButtonPressed(sender: AnyObject) {
-        view.endEditing(true)
-        formView.hidden = true
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        var destinationVC = segue.destinationViewController as LoginViewController
+        destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationVC.transitioningDelegate = self
+        
     }
+    
+    
+    
     
 }
