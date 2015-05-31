@@ -2,7 +2,7 @@
 
 A mock Tumblr app completed as Week 4 Assignment for Codepath.
 
-Time spent: 3 hours
+Time spent: 5 hours
 
 Completed stories:
 
